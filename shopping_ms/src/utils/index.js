@@ -82,6 +82,7 @@ module.exports.SubscribeMessage = async (channel, service) => {
   channel.consume(appQueue.queue, (data) => {
     console.log("received data IN SHOPPING SERVICE");
     console.log(data.content.toString());
+    service.SubscribeEvents(data.content.toString());
     channel.ack(data);
   });
 };
