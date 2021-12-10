@@ -1,4 +1,3 @@
 **/node_modules
 db
-product_ms/.env
-docker-compose.yml
+**/.env
